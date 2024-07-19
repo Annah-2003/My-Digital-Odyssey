@@ -21,7 +21,7 @@ export default function About() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1.5 }}
         >
-          I'm Irene Gitau, a software engineer specializing in front-end and back-end development. With a keen eye for design and a strong foundation in coding, I aim to create web applications that are both visually appealing and highly functional.
+          I&apos;m Irene Gitau, a software engineer specializing in front-end and back-end development. With a keen eye for design and a strong foundation in coding, I aim to create web applications that are both visually appealing and highly functional.
         </motion.p>
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-4"

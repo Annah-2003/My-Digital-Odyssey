@@ -1,8 +1,10 @@
+// pages/index.js
 import { AiFillTwitterCircle, AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { useState } from 'react';
 import Navbar from '../components/NavBar';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -30,14 +32,13 @@ export default function Home() {
             </div>
             <h1 className="text-5xl font-extrabold mb-6">Welcome to My Digital Odyssey</h1>
             <p className="text-lg mb-6">
-              I'm Irene Gitau, a passionate software engineer with expertise in modern web technologies.
+              I&apos;m Irene Gitau, a passionate software engineer with expertise in modern web technologies.
             </p>
-            <a
-              href="/projects"
-              className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
-            >
-              View My Work
-            </a>
+            <Link href="/projects">
+              <a className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700">
+                View My Work
+              </a>
+            </Link>
           </motion.div>
         </section>
       </main>
