@@ -8,13 +8,13 @@ export default function Projects() {
     {
       title: 'Project 1',
       description: 'Description of project 1...',
-      link: '',
+      link: 'https://github.com/SolveMMG/PHASE--5-SEV-0',
       image: '/path/to/project1-image.jpg'
     },
     {
       title: 'Project 2',
       description: 'Description of project 2...',
-      link: 'https://github.com/username/project2',
+      link: 'https://github.com/Annah-2003/Her-Link',
       image: '/path/to/project2-image.jpg'
     },
     // Add more projects as needed
