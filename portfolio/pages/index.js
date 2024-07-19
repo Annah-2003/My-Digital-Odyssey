@@ -1,4 +1,3 @@
-// pages/index.js
 import { AiFillTwitterCircle, AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { useState } from 'react';
@@ -34,7 +33,7 @@ export default function Home() {
             <p className="text-lg mb-6">
               I&apos;m Irene Gitau, a passionate software engineer with expertise in modern web technologies.
             </p>
-            <Link href="/projects">
+            <Link href="/projects" legacyBehavior>
               <a className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700">
                 View My Work
               </a>
