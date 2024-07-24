@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function About() {
   return (
-    <div>
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-black dark:text-white">
       <Navbar />
       <section className="p-8 bg-white">
         <motion.h1

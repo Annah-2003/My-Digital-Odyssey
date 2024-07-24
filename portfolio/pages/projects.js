@@ -52,7 +52,7 @@ export default function Projects() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Visit Project
+                View Project
               </a>
             </motion.div>
           ))}
