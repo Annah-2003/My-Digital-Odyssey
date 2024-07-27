@@ -17,7 +17,16 @@ export default function Home() {
     },
   };
 
-  const ic
+  const iconVariants = {
+    hover: {
+      scale: 1.3,
+      color: '#1DA1F2',
+      transition: {
+        duration: 0.3,
+        yoyo: Infinity,
+      },
+    },
+  };
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -30,13 +39,22 @@ export default function Home() {
             transition={{ duration: 1.5 }}
           >
             <div className="flex justify-between w-full mb-6">
-              <BsFillMoonStarsFill 
-                className="text-3xl cursor-pointer" 
-                onClick={() => setDarkMode(!darkMode)}
-              />
+              <motion.div
+                whileHover={{ scale: 1.3, color: '#FFD700' }} 
+                transition={{ duration: 0.3 }}
+              >
+                <BsFillMoonStarsFill 
+                  className="text-3xl cursor-pointer" 
+                  onClick={() => setDarkMode(!darkMode)}
+                />
+              </motion.div>
               <div className="flex space-x-4">
-                <AiFillTwitterCircle className="text-3xl cursor-pointer hover:text-blue-500" />
-                <AiFillLinkedin className="text-3xl cursor-pointer hover:text-blue-500" />
+                <motion.div variants={iconVariants} whileHover="hover">
+                  <AiFillTwitterCircle className="text-3xl cursor-pointer" />
+                </motion.div>
+                <motion.div variants={iconVariants} whileHover="hover">
+                  <AiFillLinkedin className="text-3xl cursor-pointer" />
+                </motion.div>
               </div>
             </div>
             <h1 className="text-5xl font-extrabold mb-6">Welcome to My Digital Odyssey</h1>
@@ -44,9 +62,13 @@ export default function Home() {
               I&apos;m Irene Gitau, a passionate software engineer with expertise in modern web technologies.
             </p>
             <Link href="/projects" legacyBehavior>
-              <a className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700">
+              <motion.a 
+                className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
+                variants={buttonVariants}
+                whileHover="hover"
+              >
                 View My Work
-              </a>
+              </motion.a>
             </Link>
           </motion.div>
         </section>
