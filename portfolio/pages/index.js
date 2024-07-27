@@ -1,4 +1,4 @@
-import { AiFillTwitterCircle, AiFillLinkedin, AiFillYoutube } from 'react-icons/ai';
+import { AiFillTwitterCircle, AiFillLinkedin } from 'react-icons/ai';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { useState } from 'react';
 import Navbar from '../components/NavBar';
@@ -26,7 +26,6 @@ export default function Home() {
               <div className="flex space-x-4">
                 <AiFillTwitterCircle className="text-3xl cursor-pointer hover:text-blue-500" />
                 <AiFillLinkedin className="text-3xl cursor-pointer hover:text-blue-500" />
-                <AiFillYoutube className="text-3xl cursor-pointer hover:text-red-500" />
               </div>
             </div>
             <h1 className="text-5xl font-extrabold mb-6">Welcome to My Digital Odyssey</h1>
