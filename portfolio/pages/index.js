@@ -8,6 +8,17 @@ import Link from 'next/link';
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
+  const buttonVariants = {
+    hover: {
+      scale: 1.1,
+      transition: {
+        yoyo: Infinity,
+      },
+    },
+  };
+
+  const ic
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <Navbar />
