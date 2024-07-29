@@ -1,9 +1,10 @@
-import { AiFillTwitterCircle, AiFillLinkedin } from 'react-icons/ai';
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { useState } from 'react';
 import Navbar from '../components/NavBar';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import profilePic from '../public/profile-pic.png'; 
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -38,19 +39,20 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
           >
-            <div className="flex justify-between w-full mb-6">
-              <motion.div
-                whileHover={{ scale: 1.3, color: '#FFD700' }} 
-                transition={{ duration: 0.3 }}
-              >
-                <BsFillMoonStarsFill 
-                  className="text-3xl cursor-pointer" 
-                  onClick={() => setDarkMode(!darkMode)}
-                />
-              </motion.div>
-              <div className="flex space-x-4">
-                <motion.div variants={iconVariants} whileHover="hover">
-                  <AiFillTwitterCircle className="text-3xl cursor-pointer" />
+            <div className="flex justify-between w-full mb-6 items-center">
+              <img src={profilePic.src} alt="Profile Picture" className="w-32 h-32 rounded-full" />
+              <div className="flex space-x-4 items-center">
+                <motion.div
+                  whileHover={{ scale: 1.3, color: '#FFD700' }} 
+                  transition={{ duration: 0.3 }}
+                >
+                  <BsFillMoonStarsFill 
+                    className="text-3xl cursor-pointer" 
+                    onClick={() => setDarkMode(!darkMode)}
+                  />
+                </motion.div>
+                <motion.div variants={iconVariants} whileHover="hover"> 
+                  <AiFillGithub className="text-3xl cursor-pointer" />
                 </motion.div>
                 <motion.div variants={iconVariants} whileHover="hover">
                   <AiFillLinkedin className="text-3xl cursor-pointer" />
@@ -63,7 +65,7 @@ export default function Home() {
             </p>
             <Link href="/projects" legacyBehavior>
               <motion.a 
-                className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
+                className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white py-2 px-4 rounded-lg shadow-lg hover:shadow-2xl transform transition-all duration-300 ease-in-out"
                 variants={buttonVariants}
                 whileHover="hover"
               >
