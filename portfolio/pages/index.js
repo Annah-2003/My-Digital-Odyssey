@@ -38,20 +38,18 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
+            className="w-full px-4 md:px-0"
           >
-            <div className="flex justify-between w-full mb-6 items-center">
-              <img src={profilePic.src} alt="Profile Picture" className="w-32 h-32 rounded-full" />
-              <div className="flex space-x-4 items-center">
-                <motion.div
-                  whileHover={{ scale: 1.3, color: '#FFD700' }} 
-                  transition={{ duration: 0.3 }}
-                >
+            <div className="flex flex-col md:flex-row justify-between items-center w-full mb-6">
+              <img src={profilePic.src} alt="Profile Picture" className="w-32 h-32 rounded-full mb-4 md:mb-0" />
+              <div className="flex space-x-4">
+                <motion.div variants={iconVariants} whileHover="hover">
                   <BsFillMoonStarsFill 
                     className="text-3xl cursor-pointer" 
                     onClick={() => setDarkMode(!darkMode)}
                   />
                 </motion.div>
-                <motion.div variants={iconVariants} whileHover="hover"> 
+                <motion.div variants={iconVariants} whileHover="hover">
                   <AiFillGithub className="text-3xl cursor-pointer" />
                 </motion.div>
                 <motion.div variants={iconVariants} whileHover="hover">

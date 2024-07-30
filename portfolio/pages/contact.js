@@ -1,7 +1,8 @@
-// pages/contact.js
 import { useState } from 'react';
 import Navbar from '../components/NavBar';
 import { motion } from 'framer-motion';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -9,7 +10,7 @@ export default function Contact() {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData({name: '', email: '', message: ''  });
+    setFormData({ ...formData, [name]: value });
   };
 
   const validateForm = () => {
@@ -29,14 +30,18 @@ export default function Contact() {
     }
     setErrors({});
 
-    const res = await fetch('http://127.0.0.1:5000/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
-    });
-    const data = await res.json();
-    alert(data.message);
-    setFormData({ name: '', email: '', message: '' });
+    try {
+      const res = await fetch('http://127.0.0.1:5000/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      toast.success(data.message);
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      toast.error("Failed to send message");
+    }
   };
 
   return (
@@ -101,6 +106,7 @@ export default function Contact() {
             </button>
           </form>
         </motion.div>
+        <ToastContainer />
       </section>
     </div>
   );
