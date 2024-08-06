@@ -45,22 +45,22 @@ export default function Home() {
               <Image 
                 src={profilePic} 
                 alt="Profile Picture" 
-                className="w-32 h-32 rounded-full mb-4 md:mb-0" 
-                width={128}
-                height={128}
+                className="w-40 h-40 rounded-full mb-4 md:mb-0" 
+                width={160}
+                height={160}
               />
               <div className="flex space-x-4">
                 <motion.div variants={iconVariants} whileHover="hover">
                   <BsFillMoonStarsFill 
-                    className="text-3xl cursor-pointer" 
+                    className="text-xl cursor-pointer" 
                     onClick={() => setDarkMode(!darkMode)}
                   />
                 </motion.div>
                 <motion.div variants={iconVariants} whileHover="hover">
-                  <AiFillGithub className="text-3xl cursor-pointer" />
+                  <AiFillGithub className="text-xl cursor-pointer" />
                 </motion.div>
                 <motion.div variants={iconVariants} whileHover="hover">
-                  <AiFillLinkedin className="text-3xl cursor-pointer" />
+                  <AiFillLinkedin className="text-xl cursor-pointer" />
                 </motion.div>
               </div>
             </div>
