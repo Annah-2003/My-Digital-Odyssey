@@ -30,6 +30,27 @@ export default function Home() {
     },
   };
 
+  const floatingText = {
+    animate: {
+      y: [0, -20, 0], // Adjust the values for the floating effect
+      transition: {
+        duration: 2,
+        ease: 'easeInOut',
+        repeat: Infinity,
+        repeatType: 'loop',
+      },
+    },
+  };
+
+  const interactiveImage = {
+    hover: {
+      scale: 1.05,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
   return (
     <div className={darkMode ? 'dark' : ''}>
       <Navbar />
@@ -42,13 +63,15 @@ export default function Home() {
             className="w-full max-w-3xl px-4 md:px-0"
           >
             <div className="flex flex-col md:flex-row justify-between items-center w-full mb-6">
-              <Image 
-                src={profilePic} 
-                alt="Profile Picture" 
-                className="w-40 h-40 rounded-full mb-4 md:mb-0" 
-                width={160}
-                height={160}
-              />
+              <motion.div whileHover="hover" variants={interactiveImage}>
+                <Image 
+                  src={profilePic} 
+                  alt="Profile Picture" 
+                  className="w-40 h-40 rounded-full mb-4 md:mb-0" 
+                  width={160}
+                  height={160}
+                />
+              </motion.div>
               <div className="flex space-x-4">
                 <motion.div variants={iconVariants} whileHover="hover">
                   <BsFillMoonStarsFill 
@@ -64,7 +87,13 @@ export default function Home() {
                 </motion.div>
               </div>
             </div>
-            <h1 className="text-5xl font-extrabold mb-6">Welcome to My Digital Odyssey</h1>
+            <motion.h1 
+              className="text-5xl font-extrabold mb-6"
+              variants={floatingText}
+              animate="animate"
+            >
+              Welcome to My Digital Odyssey
+            </motion.h1>
             <p className="text-lg mb-6">
               I&apos;m Irene Gitau, a passionate software engineer with expertise in modern web technologies.
             </p>

@@ -1,31 +1,35 @@
 import Navbar from '../components/NavBar';
 import { motion } from 'framer-motion';
-import AnimatedImage from '../components/AnimatedImage';
+import Image from 'next/image';
+
+const projects = [
+  {
+    title: 'CHUO YANGU',
+    description: 'Description of project 1...',
+    link: 'https://chuo-yangu.vercel.app/',
+    image: '/path/to/project1-image.jpg',
+  },
+  {
+    title: 'HER LINK',
+    description: 'HerLink aims to create a user-friendly environment where individuals can connect with their girlfriends and chat about anything and everything. The application features a sleek and modern design, making it appealing and easy to navigate for users of all ages.',
+    link: 'https://her-link.vercel.app/home',
+    image: '/path/to/project2-image.jpg',
+  },
+  {
+    title: 'QUOTE GEMS',
+    description: 'HerLink aims to create a user-friendly environment where individuals can connect with their girlfriends and chat about anything and everything. The application features a sleek and modern design, making it appealing and easy to navigate for users of all ages.',
+    link: 'https://65c1e9e7ccbef153940f2421--chipper-seahorse-fab0bb.netlify.app/',
+    image: '/Hang in there_ @thecoveteur.jpg',
+  },
+];
+
+const AnimatedImage = ({ src, alt }) => (
+  <motion.div whileHover={{ scale: 1.05 }} className="overflow-hidden rounded-lg">
+    <Image src={src} alt={alt} width={400} height={300} className="object-cover" />
+  </motion.div>
+);
 
 export default function Projects() {
-  const projects = [
-    {
-      title: 'CHUO YANGU',
-      description: 'Description of project 1...',
-      link: 'https://chuo-yangu.vercel.app/',
-      image: '/path/to/project1-image.jpg',
-    },
-    {
-      title: 'HER LINK',
-      description: 'HerLink aims to create a user-friendly environment where individuals can connect with their girlfriends and chat about anything and everything. The application features a sleek and modern design, making it appealing and easy to navigate for users of all ages.',
-      link: 'https://her-link.vercel.app/home',
-      image: '/path/to/project2-image.jpg',
-    },
-    {
-      title: 'QUOTE GEMS',
-      description: 'HerLink aims to create a user-friendly environment where individuals can connect with their girlfriends and chat about anything and everything. The application features a sleek and modern design, making it appealing and easy to navigate for users of all ages.',
-      link: 'https://65c1e9e7ccbef153940f2421--chipper-seahorse-fab0bb.netlify.app/',
-      image: '/path/to/project2-image.jpg',
-    },
-    
-    
-  ];
-
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-black dark:text-white">
       <Navbar />
