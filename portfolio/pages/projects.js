@@ -7,13 +7,13 @@ const projects = [
     title: 'CHUO YANGU',
     description: 'Description of project 1...',
     link: 'https://chuo-yangu.vercel.app/',
-    image: '/path/to/project1-image.jpg',
+    image: '/Screenshot (8).png',
   },
   {
     title: 'HER LINK',
     description: 'HerLink aims to create a user-friendly environment where individuals can connect with their girlfriends and chat about anything and everything. The application features a sleek and modern design, making it appealing and easy to navigate for users of all ages.',
     link: 'https://her-link.vercel.app/home',
-    image: '/path/to/project2-image.jpg',
+    image: '/HER-LINK.png',
   },
   {
     title: 'QUOTE GEMS',
