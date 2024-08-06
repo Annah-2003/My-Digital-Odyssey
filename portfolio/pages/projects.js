@@ -16,6 +16,13 @@ export default function Projects() {
       link: 'https://her-link.vercel.app/home',
       image: '/path/to/project2-image.jpg',
     },
+    {
+      title: 'QUOTE GEMS',
+      description: 'HerLink aims to create a user-friendly environment where individuals can connect with their girlfriends and chat about anything and everything. The application features a sleek and modern design, making it appealing and easy to navigate for users of all ages.',
+      link: 'https://65c1e9e7ccbef153940f2421--chipper-seahorse-fab0bb.netlify.app/',
+      image: '/path/to/project2-image.jpg',
+    },
+    
     
   ];
 

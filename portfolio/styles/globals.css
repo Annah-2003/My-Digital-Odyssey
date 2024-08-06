@@ -61,3 +61,42 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Example CSS if using Tailwind */
+.inline-flex {
+  display: inline-flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.size-5 {
+  width: 1.25rem; /* 5 * 0.25rem (base size) */
+  height: 1.25rem;
+}
+
+.w-5 {
+  width: 1.25rem;
+}
+
+.h-5 {
+  height: 1.25rem;
+}
+
+.bg-blue-600 {
+  background-color: #2563EB;
+}
+
+.text-white {
+  color: #FFFFFF;
+}
+
+.dark\:bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
+}

@@ -4,7 +4,8 @@ import { useState } from 'react';
 import Navbar from '../components/NavBar';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import profilePic from '../public/profile-pic.png'; 
+import Image from 'next/image';
+import profilePic from '../public/profile-pic.png';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -30,7 +31,7 @@ export default function Home() {
   };
 
   return (
-    <div className={darkMode ? "dark" : ""}>
+    <div className={darkMode ? 'dark' : ''}>
       <Navbar />
       <main className="bg-gray-100 dark:bg-gray-900 text-black dark:text-white min-h-screen p-6">
         <section className="flex flex-col items-center justify-center min-h-screen text-center">
@@ -38,10 +39,16 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
-            className="w-full px-4 md:px-0"
+            className="w-full max-w-3xl px-4 md:px-0"
           >
             <div className="flex flex-col md:flex-row justify-between items-center w-full mb-6">
-              <img src={profilePic.src} alt="Profile Picture" className="w-32 h-32 rounded-full mb-4 md:mb-0" />
+              <Image 
+                src={profilePic} 
+                alt="Profile Picture" 
+                className="w-32 h-32 rounded-full mb-4 md:mb-0" 
+                width={128}
+                height={128}
+              />
               <div className="flex space-x-4">
                 <motion.div variants={iconVariants} whileHover="hover">
                   <BsFillMoonStarsFill 
@@ -62,7 +69,7 @@ export default function Home() {
               I&apos;m Irene Gitau, a passionate software engineer with expertise in modern web technologies.
             </p>
             <Link href="/projects" legacyBehavior>
-              <motion.a 
+              <motion.a
                 className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white py-2 px-4 rounded-lg shadow-lg hover:shadow-2xl transform transition-all duration-300 ease-in-out"
                 variants={buttonVariants}
                 whileHover="hover"
