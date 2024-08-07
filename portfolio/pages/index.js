@@ -67,24 +67,36 @@ export default function Home() {
                 <Image 
                   src={profilePic} 
                   alt="Profile Picture" 
-                  className="w-40 h-40 rounded-full mb-4 md:mb-0" 
-                  width={160}
-                  height={160}
+                  className="w-52 h-52 rounded-full mb-4 md:mb-0" 
+                  width={208}
+                  height={208}
                 />
               </motion.div>
               <div className="flex space-x-4">
                 <motion.div variants={iconVariants} whileHover="hover">
                   <BsFillMoonStarsFill 
-                    className="text-xl cursor-pointer" 
+                    className="text-3xl cursor-pointer" 
                     onClick={() => setDarkMode(!darkMode)}
                   />
                 </motion.div>
-                <motion.div variants={iconVariants} whileHover="hover">
-                  <AiFillGithub className="text-xl cursor-pointer" />
-                </motion.div>
-                <motion.div variants={iconVariants} whileHover="hover">
-                  <AiFillLinkedin className="text-xl cursor-pointer" />
-                </motion.div>
+                <motion.a 
+                  variants={iconVariants} 
+                  whileHover="hover" 
+                  href="https://github.com/Annah-2003" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <AiFillGithub className="text-3xl cursor-pointer" />
+                </motion.a>
+                <motion.a 
+                  variants={iconVariants} 
+                  whileHover="hover" 
+                  href="https://www.linkedin.com/in/irene-gitau-4048a5251/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <AiFillLinkedin className="text-3xl cursor-pointer" />
+                </motion.a>
               </div>
             </div>
             <motion.h1 
