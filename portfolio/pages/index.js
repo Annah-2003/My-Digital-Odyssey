@@ -32,7 +32,7 @@ export default function Home() {
 
   const floatingText = {
     animate: {
-      y: [0, -20, 0], // Adjust the values for the floating effect
+      y: [0, -20, 0],
       transition: {
         duration: 2,
         ease: 'easeInOut',
@@ -67,33 +67,33 @@ export default function Home() {
                 <Image 
                   src={profilePic} 
                   alt="Profile Picture" 
-                  className="w-52 h-52 rounded-full mb-4 md:mb-0" 
-                  width={208}
-                  height={208}
+                  className="w-48 h-48 rounded-full mb-4 md:mb-0" 
+                  width={192}
+                  height={192}
                 />
               </motion.div>
-              <div className="flex space-x-4">
+              <div className="flex space-x-6">
                 <motion.div variants={iconVariants} whileHover="hover">
                   <BsFillMoonStarsFill 
                     className="text-3xl cursor-pointer" 
                     onClick={() => setDarkMode(!darkMode)}
                   />
                 </motion.div>
-                <motion.a 
-                  variants={iconVariants} 
-                  whileHover="hover" 
-                  href="https://github.com/Annah-2003" 
-                  target="_blank" 
+                <motion.a
+                  href="https://github.com/Annah-2003"
+                  target="_blank"
                   rel="noopener noreferrer"
+                  variants={iconVariants}
+                  whileHover="hover"
                 >
                   <AiFillGithub className="text-3xl cursor-pointer" />
                 </motion.a>
-                <motion.a 
-                  variants={iconVariants} 
-                  whileHover="hover" 
-                  href="https://www.linkedin.com/in/irene-gitau-4048a5251/" 
-                  target="_blank" 
+                <motion.a
+                  href="https://www.linkedin.com/in/irene-gitau-4048a5251/"
+                  target="_blank"
                   rel="noopener noreferrer"
+                  variants={iconVariants}
+                  whileHover="hover"
                 >
                   <AiFillLinkedin className="text-3xl cursor-pointer" />
                 </motion.a>
@@ -109,15 +109,26 @@ export default function Home() {
             <p className="text-lg mb-6">
               I&apos;m Irene Gitau, a passionate software engineer with expertise in modern web technologies.
             </p>
-            <Link href="/projects" legacyBehavior>
-              <motion.a
-                className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white py-2 px-4 rounded-lg shadow-lg hover:shadow-2xl transform transition-all duration-300 ease-in-out"
-                variants={buttonVariants}
-                whileHover="hover"
-              >
-                View My Work
-              </motion.a>
-            </Link>
+            <div className="flex justify-center space-x-4">
+              <Link href="/projects" legacyBehavior>
+                <motion.a
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-6 rounded-lg shadow-lg hover:shadow-2xl transform transition-all duration-300 ease-in-out"
+                  variants={buttonVariants}
+                  whileHover="hover"
+                >
+                  View My Work
+                </motion.a>
+              </Link>
+              <Link href="/rating-game" legacyBehavior>
+                <motion.a
+                  className="bg-gradient-to-r from-green-500 to-teal-500 text-white py-2 px-6 rounded-lg shadow-lg hover:shadow-2xl transform transition-all duration-300 ease-in-out"
+                  variants={buttonVariants}
+                  whileHover="hover"
+                >
+                  Play the Rating Game
+                </motion.a>
+              </Link>
+            </div>
           </motion.div>
         </section>
       </main>

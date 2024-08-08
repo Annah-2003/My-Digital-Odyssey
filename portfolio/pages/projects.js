@@ -5,7 +5,7 @@ import Image from 'next/image';
 const projects = [
   {
     title: 'CHUO YANGU',
-    description: 'Description of project 1...',
+    description: 'CHUO YANGU enhances communication in educational institutions by allowing users to manage profiles, post and interact with events, Fun-Times, and products efficiently.',
     link: 'https://chuo-yangu.vercel.app/',
     image: '/Screenshot (8).png',
   },
