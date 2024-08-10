@@ -1,13 +1,19 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import qrCodeImage from '../public/QR-CODE IMAGE.png'; // Ensure the QR code image is in the public directory
+import qrCodeImage from '../public/QR-CODE IMAGE.png'; 
 
 export default function Rating() {
   const [showQRCode, setShowQRCode] = useState(false);
+  const router = useRouter(); 
 
   const handleShowQRCode = () => {
     setShowQRCode(true);
+  };
+
+  const handleBackToHome = () => {
+    router.push('/'); 
   };
 
   return (
@@ -58,6 +64,15 @@ export default function Rating() {
           </a>
         </>
       )}
+      <motion.button
+        onClick={handleBackToHome}
+        className="mt-8 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white py-2 px-4 rounded-lg shadow-lg hover:shadow-2xl transform transition-all duration-300 ease-in-out"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 1.5 }}
+      >
+        Back to Home
+      </motion.button>
     </div>
   );
 }
