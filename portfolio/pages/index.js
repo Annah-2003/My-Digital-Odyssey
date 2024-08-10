@@ -125,7 +125,7 @@ export default function Home() {
                   variants={buttonVariants}
                   whileHover="hover"
                 >
-                  Play the Rating Game
+                  Drop a rating
                 </motion.a>
               </Link>
             </div>
