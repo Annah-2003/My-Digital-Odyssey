@@ -4,10 +4,10 @@ import Image from 'next/image';
 
 const projects = [
   {
-    title: 'CHUO YANGU',
-    description: 'CHUO YANGU enhances communication in educational institutions by allowing users to manage profiles, post and interact with events, Fun-Times, and products efficiently.',
-    link: 'https://chuo-yangu.vercel.app/',
-    image: '/Screenshot (8).png',
+    title: 'POWER FIT GYM',
+    description: 'This project is aimed at providing users with a great and personal fitness experience. Users can easily register, create personalized profiles, choose from various fitness plans, switch between plans based on evolving goals, and view profiles of available instructors to make informed choices.',
+    link: 'https://65b676634d919a70c4bf53ae--vocal-fenglisu-dcc1e1.netlify.app/',
+    image: '/Screenshot (29).png',
   },
   {
     title: 'HER LINK',

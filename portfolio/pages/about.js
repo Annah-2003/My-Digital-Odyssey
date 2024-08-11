@@ -39,7 +39,7 @@ export default function About() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1.5 }}
         >
-          I&apos;m Irene Gitau, a certified software engineer with a passion for creating web applications that are visually appealing and highly functional. My expertise lies in front-end and back-end development, and I have a strong foundation in design.
+          I&apos;m a certified software engineer with a strong passion to create visually appealing and functional web applications. With expertise in front-end, back-end development and a strong design foundation, I aim to connect technology and business by developing innovative solutions that drive growth and enhance user experiences.
         </motion.p>
 
         <motion.div
@@ -68,7 +68,7 @@ export default function About() {
             <FaLightbulb className="text-4xl text-yellow-300 mb-4" />
             <h2 className="text-2xl font-bold mb-4">Career Aspirations</h2>
             <p>
-              My goal is to leverage my skills to build innovative solutions that improve user experiences and contribute to the advancement of technology.
+            My career aspiration is to bridge the gap between technology and business. As a software engineer currently pursuing a degree in Business and Information Technology, I aim to leverage my technical skills to create innovative solutions that drive business growth and enhance user experiences.
             </p>
           </div>
 
@@ -76,7 +76,7 @@ export default function About() {
             <FaRocket className="text-4xl text-red-300 mb-4" />
             <h2 className="text-2xl font-bold mb-4">Hobbies</h2>
             <p>
-              When I&apos;m not coding, I enjoy listening to the Queen Beyonce, reading thriller novels, and playing chess.
+              When I&apos;m not coding, I enjoy listening to the Queen Beyonce👑, reading thriller novels, and playing chess.
             </p>
           </div>
         </motion.div>
