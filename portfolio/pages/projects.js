@@ -4,10 +4,10 @@ import Image from 'next/image';
 
 const projects = [
   {
-    title: 'POWER FIT GYM',
-    description: 'This project is aimed at providing users with a great and personal fitness experience. Users can easily register, create personalized profiles, choose from various fitness plans, switch between plans based on evolving goals, and view profiles of available instructors to make informed choices.',
-    link: 'https://65b676634d919a70c4bf53ae--vocal-fenglisu-dcc1e1.netlify.app/',
-    image: '/Screenshot (29).png',
+    title: 'SALES PROGRESS TRACKER',
+    description: 'This project is a professional sales tracking application that monitors performance, progress, and team productivity.',
+    link: 'https://employee-spt.vercel.app/login',
+    image: '/Screenshot (425).png',
   },
   {
     title: 'HER LINK',
@@ -16,10 +16,10 @@ const projects = [
     image: '/HER-LINK.png',
   },
   {
-    title: 'QUOTE GEMS',
-    description: 'HerLink aims to create a user-friendly environment where individuals can connect with their girlfriends and chat about anything and everything. The application features a sleek and modern design, making it appealing and easy to navigate for users of all ages.',
-    link: 'https://65c1e9e7ccbef153940f2421--chipper-seahorse-fab0bb.netlify.app/',
-    image: '/Hang in there_ @thecoveteur.jpg',
+    title: 'OKY HACKATHON',
+    description: 'Oky is a girls’ period tracking app, where I helped launch a new in-app gifting feature with partner companies.',
+    link: 'https://github.com/Annah-2003/periodTracker',
+    image: '/Screenshot 2026-01-05 193708.png',
   },
 ];
 
